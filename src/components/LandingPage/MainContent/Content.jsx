@@ -6,7 +6,7 @@ import FilterSection from "./FilterSection/FilterSection";
 const Content = () => {
      return (
           <Box as="section" marginTop={6} w="100%" p={6}>
-               <Flex>
+               <Flex gap={5}>
                     <FilterSection />
                     <ContentSection />
                </Flex>
