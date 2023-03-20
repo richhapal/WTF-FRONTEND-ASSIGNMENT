@@ -1,4 +1,4 @@
-import { Box, Button, Checkbox, Flex, HStack, Input, Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack, Stack, Text, VStack } from "@chakra-ui/react";
+import { Box, Button, Checkbox, Flex, Heading, HStack, Input, Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack, Stack, Text, VStack } from "@chakra-ui/react";
 import React, { useState } from "react";
 
 const labelStyles = {
@@ -11,15 +11,13 @@ const FilterSection = () => {
      return (
           <Box w="30%" p={3}>
                <Flex direction="column" gap="1rem">
-                    <Text as="h2" fontSize="lg">
-                         Filters
-                    </Text>
+                    <Heading size="lg">Filters</Heading>
                     <Stack>
-                         <Text>Location</Text>
+                         <Heading size="md">Location</Heading>
                          <Input bg="blackAlpha.200" color="blackAlpha.200" variant="filled" placeholder="Enter Location" />
                     </Stack>
                     <Stack>
-                         <Text>Category</Text>
+                         <Heading size="md">Category</Heading>
                          <HStack>
                               <Button size="sm" isActive>
                                    All
@@ -30,7 +28,7 @@ const FilterSection = () => {
                          </HStack>
                     </Stack>
                     <Stack>
-                         <Text>Features</Text>
+                         <Heading size="sm">Features</Heading>
                          <VStack align="left">
                               <Checkbox colorScheme="green">Zumba Class</Checkbox>
                               <Checkbox colorScheme="green">Crossfit Circuit</Checkbox>
@@ -39,7 +37,7 @@ const FilterSection = () => {
                          </VStack>
                     </Stack>
                     <Stack>
-                         <Text>Distance in Km</Text>
+                         <Heading size="sm">Distance in Km</Heading>
                          <Box pt={5}>
                               <Slider aria-label="slider-ex-6" min={0} max={10} defaultValue={0} onChange={(val) => setValue(val)}>
                                    <Box mb="14">
