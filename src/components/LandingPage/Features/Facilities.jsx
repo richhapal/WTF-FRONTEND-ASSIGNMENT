@@ -4,7 +4,7 @@ import FacilityLayout from "./FacilityLayout";
 
 const Facilities = () => {
      return (
-          <Box flex="1">
+          <Box>
                <FacilityLayout />
           </Box>
      );

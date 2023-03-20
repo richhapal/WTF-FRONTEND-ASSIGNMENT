@@ -4,9 +4,10 @@ import { BsCarFront } from "react-icons/bs";
 import { AiFillLock } from "react-icons/ai";
 import { FaShower } from "react-icons/fa";
 import { GiCctvCamera } from "react-icons/gi";
+import { CgGym } from "react-icons/cg";
 const FacilityLayout = () => {
      return (
-          <Flex justifyContent={"space-evenly"}>
+          <Flex justifyContent={"space-evenly"} gap={5}>
                <Flex
                     alignItems="center"
                     gap={2}
@@ -34,8 +35,23 @@ const FacilityLayout = () => {
                     borderRadius={5}
                     fontSize="1.3rem"
                >
-                    <Text>Modern </Text>
+                    <Text>Locker </Text>
                     <Box>{<AiFillLock />}</Box>
+               </Flex>
+               <Flex
+                    alignItems="center"
+                    gap={2}
+                    direction="column"
+                    justifyContent="center"
+                    bg="white"
+                    color="black"
+                    width="100px"
+                    height="100px"
+                    borderRadius={5}
+                    fontSize="1.3rem"
+               >
+                    <Text>Modern </Text>
+                    <Box>{<CgGym />}</Box>
                </Flex>
                <Flex
                     alignItems="center"
