@@ -5,7 +5,7 @@ import { NavLogo } from "./NavLogo";
 
 const Navbar = () => {
      return (
-          <Box as="nav" bg="blackAlpha.700" h="350px" color="white" position="relative" mb={5}>
+          <Box as="nav" bg="blackAlpha.700" h="450px" color="white" position="relative" mb={5}>
                <Box position="absolute" top="0" w="100%">
                     <Flex justifyContent="space-between" p="2rem">
                          <NavLogo />
