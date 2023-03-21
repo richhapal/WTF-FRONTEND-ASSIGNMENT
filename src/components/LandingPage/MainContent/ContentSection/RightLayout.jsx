@@ -20,7 +20,7 @@ const RightLayout = () => {
                          <Heading size="md" color="#f1f354">
                               1500 for 3 Months
                          </Heading>
-                         <Button>Book Now</Button>
+                         <Button variant="primary">Book Now</Button>
                     </Flex>
                </Flex>
           </Box>

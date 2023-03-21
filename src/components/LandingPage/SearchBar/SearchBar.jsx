@@ -11,7 +11,7 @@ const SearchBar = () => {
                               <InputLeftAddon pointerEvents="none" children={<AiOutlineSearch />} bg="black" border="none" color="gray.300" />
                               <Input type="tel" placeholder="Search in GYMS" w="80%" border="none" />
                          </InputGroup>
-                         <Button>Search</Button>
+                         <Button variant="primary">Search</Button>
                     </Flex>
                </Box>
           </Center>
