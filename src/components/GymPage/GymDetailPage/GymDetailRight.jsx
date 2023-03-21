@@ -11,7 +11,7 @@ const GymDetailRight = () => {
                               <Heading size="lg">Choose Membership</Heading>
                          </Center>
                          <Flex justifyContent="space-between" w="100%">
-                              <Button>General</Button>
+                              <Button variant="primary">General</Button>
                               <Text> Goal Focused</Text>
                          </Flex>
                          <VoucherPlan />
