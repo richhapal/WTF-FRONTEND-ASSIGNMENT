@@ -17,7 +17,7 @@ export const gymDataBySearch = (lat, long) => async (dispatch) => {
           const url = `https://devapi.wtfup.me/gym/nearestgym?lat=${lat}&long=${long}`;
           const result = await axios.get(url);
           const { data } = result.data;
-          console.log("gymnearby", data);
+          // console.log("gymnearby", data);
           dispatch(gymActions.updateGymList(data));
      } catch (error) {
           console.log("error", error);
@@ -29,7 +29,7 @@ export const findCoordinateApi = async (cityName) => {
           const URL = `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}`;
           const result = await axios.get(URL);
           const data = result.data.results[0];
-          console.log("city coordinate----", data);
+          // console.log("city coordinate----", data);
           if (data) {
                return { lat: data.latitude, long: data.longitude };
           } else {

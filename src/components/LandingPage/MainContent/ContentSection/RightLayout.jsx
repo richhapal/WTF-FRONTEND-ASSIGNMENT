@@ -14,9 +14,6 @@ const RightLayout = (props) => {
           duration = `${props.duration_text} ${props.distance_text}`;
      }
 
-     //  "distance_text": "2928.43 km",
-     // "duration_text": "4392.64 minutes",
-
      return (
           <Box flex="1" p={5}>
                <Flex height="100%" gap={2} flexDirection="column" justifyContent="space-evenly">
