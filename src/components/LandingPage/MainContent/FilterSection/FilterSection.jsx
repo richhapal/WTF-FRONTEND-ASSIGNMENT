@@ -1,5 +1,7 @@
 import { Box, Button, Checkbox, Flex, Heading, HStack, Input, Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack, Stack, Text, VStack } from "@chakra-ui/react";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useDispatch } from "react-redux";
+import { findCoordinate, gymDataBySearch } from "../../../../helper/api";
 
 const labelStyles = {
      mt: "-8",
@@ -7,14 +9,29 @@ const labelStyles = {
 };
 
 const FilterSection = () => {
+     const [cityName, setCityName] = useState("");
      const [value, setValue] = useState(0);
+     const dispatch = useDispatch();
+     const handleCityName = (e) => {
+          setCityName(e.target.value);
+     };
+
+     useEffect(() => {
+          const timer = setTimeout(() => {
+               dispatch(gymDataBySearch(cityName));
+               console.log("cityname", cityName);
+               // findCoordinate(cityName);
+          }, 500);
+          return () => clearTimeout(timer);
+     }, [cityName]);
+
      return (
           <Box w="30%" p={3}>
                <Flex direction="column" gap="1rem">
                     <Heading size="lg">Filters</Heading>
                     <Stack>
                          <Heading size="md">Location</Heading>
-                         <Input bg="blackAlpha.200" color="blackAlpha.200" variant="filled" placeholder="Enter Location" />
+                         <Input bg="blackAlpha.200" value={cityName} onChange={handleCityName} variant="filled" placeholder="Enter Location" />
                     </Stack>
                     <Stack>
                          <Heading size="md">Category</Heading>

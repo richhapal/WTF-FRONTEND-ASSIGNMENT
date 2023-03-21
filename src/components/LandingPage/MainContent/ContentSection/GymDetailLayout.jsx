@@ -3,7 +3,7 @@ import React from "react";
 import LeftLayout from "./LeftLayout";
 import RightLayout from "./RightLayout";
 
-const GymDetailLayout = () => {
+const GymDetailLayout = (props) => {
      return (
           <Box h={350} px={6}>
                {/* TAG IMPLEMENTATION */}
@@ -11,7 +11,7 @@ const GymDetailLayout = () => {
                     {/* Box Left Layout */}
                     <LeftLayout />
                     {/* Box right Layout */}
-                    <RightLayout />
+                    <RightLayout {...props} />
                </Flex>
           </Box>
      );

@@ -1,15 +1,15 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-     value: 0,
+     gymList: [],
 };
 
 export const gymSlice = createSlice({
      name: "counter",
      initialState,
      reducers: {
-          decrement: (state) => {
-               state.value -= 1;
+          updateGymList: (state, payload) => {
+               state.gymList = payload.payload;
           },
      },
 });
