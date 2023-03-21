@@ -7,8 +7,8 @@ const Features = () => {
           <Box my={8}>
                <Flex px={7} alignItems="center" justifyContent="space-evenly">
                     <VStack align="left">
-                         <Heading size="lg">WTF Fitness</Heading>
-                         <Heading size="lg">Experience</Heading>
+                         <Heading size="xl">WTF Fitness</Heading>
+                         <Heading size="xl">Experience</Heading>
                          <Heading letterSpacing={1} size="md">
                               At Your Regular Gym Cost
                          </Heading>
