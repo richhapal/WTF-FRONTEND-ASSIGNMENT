@@ -7,7 +7,7 @@ import { GiCctvCamera } from "react-icons/gi";
 import { CgGym } from "react-icons/cg";
 const FacilityLayout = () => {
      return (
-          <Flex justifyContent={"space-evenly"} gap={5}>
+          <Flex justifyContent={"space-between"} gap={5}>
                <Flex
                     alignItems="center"
                     gap={2}
@@ -65,7 +65,7 @@ const FacilityLayout = () => {
                     borderRadius={5}
                     fontSize="1.3rem"
                >
-                    <Text>CCTB</Text>
+                    <Text>CCTV</Text>
                     <Box>{<GiCctvCamera />}</Box>
                </Flex>
                <Flex
