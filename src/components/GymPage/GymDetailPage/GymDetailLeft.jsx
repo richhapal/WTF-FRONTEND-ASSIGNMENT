@@ -1,4 +1,4 @@
-import { Box, Heading, HStack, List, ListItem, Text, UnorderedList, VStack } from "@chakra-ui/react";
+import { Box, Flex, Heading, HStack, List, ListItem, Text, UnorderedList, VStack } from "@chakra-ui/react";
 import React from "react";
 import Facilities from "../../LandingPage/Features/Facilities";
 import { BsCalendarCheck } from "react-icons/bs";
@@ -7,8 +7,8 @@ import { CgGym } from "react-icons/cg";
 const GymDetailLeft = () => {
      return (
           <Box flex="1">
-               <List spacing={5} p={5}>
-                    <ListItem>
+               <Flex p={5} flexDirection="column" justifyContent="space-evenly" gap={5}>
+                    <Box>
                          <VStack gap={2} align textAlign="justify">
                               <Heading size="md">Description</Heading>
                               <Text>
@@ -16,20 +16,20 @@ const GymDetailLeft = () => {
                                    voluptas facere doloremque ut magni sit saepe molestiae blanditiis aliquam reiciendis numquam! Facilis.
                               </Text>
                          </VStack>
-                    </ListItem>
-                    <ListItem>
+                    </Box>
+                    <Box>
                          <VStack gap={2} align>
                               <Heading size="md">Facilities</Heading>
                               <Facilities />
                          </VStack>
-                    </ListItem>
-                    {/* <ListItem>
+                    </Box>
+                    {/* <Box>
                          <VStack gap={2} align>
                               <Heading size="md">Why to choose</Heading>
                               <Facilities />
                          </VStack>
-                    </ListItem> */}
-                    <ListItem>
+                    </Box> */}
+                    <Box>
                          <VStack gap={2} align>
                               <Heading size="md">How it works ?</Heading>
                          </VStack>
@@ -53,8 +53,8 @@ const GymDetailLeft = () => {
                                    </HStack>
                               </ListItem>
                          </UnorderedList>
-                    </ListItem>
-               </List>
+                    </Box>
+               </Flex>
           </Box>
      );
 };
