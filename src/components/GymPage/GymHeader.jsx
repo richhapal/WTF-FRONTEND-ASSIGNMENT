@@ -1,4 +1,4 @@
-import { Box, Flex, Heading, HStack, List, ListIcon, ListItem, Tag, TagLabel, Text } from "@chakra-ui/react";
+import { Box, Flex, Heading, HStack, Tag, TagLabel, Text } from "@chakra-ui/react";
 import React from "react";
 import { GoLocation } from "react-icons/go";
 import { MdLeaderboard, MdStarOutline } from "react-icons/md";
