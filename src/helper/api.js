@@ -12,30 +12,29 @@ export const gymDataApi = () => async (dispatch) => {
      }
 };
 
-export const gymDataBySearch = (cityName) => async (dispatch) => {
+export const gymDataBySearch = (lat, long) => async (dispatch) => {
      try {
-          const url = `https://devapi.wtfup.me/gym/nearestgym?at=30.325488815850512&long=78.0042384802231`;
+          const url = `https://devapi.wtfup.me/gym/nearestgym?lat=${lat}&long=${long}`;
           const result = await axios.get(url);
           const { data } = result.data;
           console.log("gymnearby", data);
-          // dispatch(gymActions.updateGymList(data));
+          dispatch(gymActions.updateGymList(data));
      } catch (error) {
           console.log("error", error);
      }
 };
 
-export const findCoordinate = async (cityName) => {
+export const findCoordinateApi = async (cityName) => {
      try {
           const URL = `https://geocoding-api.open-meteo.com/v1/search?name=${cityName}`;
-          const Response = await fetch(URL);
-          const cityList = await Response.json();
-          console.log("cityList result", cityList);
-
-          // if (cityList.results) {
-          //      dispatch(weatherActions.updateCityListNames(cityList.results));
-          // } else {
-          //      dispatch(weatherActions.updateCityListNames(false));
-          // }
+          const result = await axios.get(URL);
+          const data = result.data.results[0];
+          console.log("city coordinate----", data);
+          if (data) {
+               return { lat: data.latitude, long: data.longitude };
+          } else {
+               return false;
+          }
      } catch (error) {
           console.log(error);
      }

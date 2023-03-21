@@ -9,7 +9,7 @@ const GymDetailLayout = (props) => {
                {/* TAG IMPLEMENTATION */}
                <Flex height="100%">
                     {/* Box Left Layout */}
-                    <LeftLayout />
+                    <LeftLayout {...props} />
                     {/* Box right Layout */}
                     <RightLayout {...props} />
                </Flex>

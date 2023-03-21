@@ -1,7 +1,7 @@
 import { Box, Button, Checkbox, Flex, Heading, HStack, Input, Slider, SliderFilledTrack, SliderMark, SliderThumb, SliderTrack, Stack, Text, VStack } from "@chakra-ui/react";
 import React, { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { findCoordinate, gymDataBySearch } from "../../../../helper/api";
+import { findCoordinateApi, gymDataBySearch } from "../../../../helper/api";
 
 const labelStyles = {
      mt: "-8",
@@ -18,9 +18,17 @@ const FilterSection = () => {
 
      useEffect(() => {
           const timer = setTimeout(() => {
-               dispatch(gymDataBySearch(cityName));
-               console.log("cityname", cityName);
-               // findCoordinate(cityName);
+               async function findCoordinate() {
+                    if (cityName) {
+                         const cityCoordinate = await findCoordinateApi(cityName);
+                         console.log("cityname", cityCoordinate);
+                         if (cityCoordinate) {
+                              const { lat, long } = cityCoordinate;
+                              dispatch(gymDataBySearch(lat, long));
+                         }
+                    }
+               }
+               findCoordinate();
           }, 500);
           return () => clearTimeout(timer);
      }, [cityName]);
