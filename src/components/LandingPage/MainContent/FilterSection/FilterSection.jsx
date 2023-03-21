@@ -19,12 +19,18 @@ const FilterSection = () => {
                     <Stack>
                          <Heading size="md">Category</Heading>
                          <HStack>
-                              <Button size="sm" isActive>
+                              <Button variant="primary" size="sm">
                                    All
                               </Button>
-                              <Button size="sm">Pro</Button>
-                              <Button size="sm">ELITE</Button>
-                              <Button size="sm">LUXE</Button>
+                              <Button variant="secondary" size="sm">
+                                   Pro
+                              </Button>
+                              <Button variant="secondary" size="sm">
+                                   ELITE
+                              </Button>
+                              <Button variant="secondary" size="sm">
+                                   LUXE
+                              </Button>
                          </HStack>
                     </Stack>
                     <Stack>
