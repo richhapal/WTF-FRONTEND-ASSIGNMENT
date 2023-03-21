@@ -17,6 +17,20 @@ const theme = extendTheme({
                },
           },
      },
+     components: {
+          Button: {
+               variants: {
+                    primary: {
+                         bg: "red",
+                         // boxShadow: "0 0 2px 2px #efdfde",
+                    },
+                    secondary: {
+                         bg: "#686868c2",
+                         color: "#9f9f9f",
+                    },
+               },
+          },
+     },
 });
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
